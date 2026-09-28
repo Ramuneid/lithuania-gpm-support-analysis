@@ -1,0 +1,14 @@
+vmi_support:
+  description: "VMI support calculation statistics workbook"
+  url: "https://www.vmi.lt/evmi/documents/20142/699840/Paramos+apskaiciavimo+statistika+2026-07-07.xlsx/4efc7c77-25fb-2e1f-6e18-34e88bcb0b45?t=1783412037516"
+  raw_file: "paramos_apskaiciavimo_statistika_2026-07-07.xlsx"
+
+names:
+  description: "VLKK Lithuanian names dataset"
+  url: "https://get.data.gov.lt/datasets/gov/vlkk/vardai/Vardas/:format/csv"
+  raw_file: "vardai.csv"
+
+rekvizitai:
+  description: "Local Rekvizitai organization data"
+  local_path: "SET_LOCAL_PATH_IN_sources.local.yaml"
+  raw_file: "rekvizitai.csv"

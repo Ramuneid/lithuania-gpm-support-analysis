@@ -1,0 +1,3 @@
+# Copy to sources.local.yaml and set a path to your separately obtained file.
+rekvizitai:
+  local_path: "C:/path/to/rekvizitai.csv"

@@ -1,0 +1,171 @@
+# This file controls which cleaned VMI columns are saved.
+#
+# How to use it:
+# - The YAML key, for example recipient_municipality, is the cleaned column name.
+# - source_label shows the original Lithuanian source meaning.
+# - description explains the column in plain English.
+# - keep controls whether the column is saved to data/interim.
+#
+# Change keep: true to keep: false if you do not want to save a column.
+# Rename a YAML key if you want a different cleaned column name.
+
+vmi_support:
+  columns:
+    tax_year:
+      source_label: "Source sheet year"
+      description: "Tax year represented by the VMI worksheet"
+      keep: true
+
+    recipient_municipality:
+      source_label: "Gavėjo savivaldybės pavadinimas"
+      description: "Recipient municipality name"
+      keep: true
+
+    recipient_code:
+      source_label: "Gavėjo kodas"
+      description: "Recipient code"
+      keep: true
+
+    recipient_name:
+      source_label: "Gavėjo pavadinimas"
+      description: "Recipient name"
+      keep: true
+
+    legal_form:
+      source_label: "Teisinė forma"
+      description: "Legal form"
+      keep: true
+
+    requests_total:
+      source_label: "Bendras pateiktų prašymų skaičius"
+      description: "Total submitted requests"
+      keep: false
+
+    requests:
+      source_label: "Prašymų, pagal kuriuos apskaičiuota PMD, skaičius"
+      description: "Number of requests"
+      keep: true
+
+    electronic_requests_with_calculated_pmd:
+      source_label: "Elektroniniu būdu pateiktų Prašymų, pagal kuriuos apskaičiuota PMD, skaičius"
+      description: "Electronic requests where PMD was calculated"
+      keep: false
+
+    electronic_requests_with_calculated_pmd_pct:
+      source_label: "Elektroniniu būdu pateiktų Prašymų, pagal kuriuos apskaičiuota PMD, proc."
+      description: "Share of calculated PMD requests submitted electronically"
+      keep: false
+
+    calculated_pmd_eur:
+      source_label: "Apskaičiuota PMD, Eur"
+      description: "Calculated personal income tax support amount in EUR"
+      keep: true
+
+    transferred_pmd_eur:
+      source_label: "Pervesta PMD, įvertinus perskaičiavimus už ankstesnius metus"
+      description: "Transferred PMD amount after recalculations from earlier years"
+      keep: false
+
+    pmd_difference_eur:
+      source_label: "Skirtumas tarp pervestos ir apskaičiuotos PMD"
+      description: "Difference between transferred and calculated PMD amount"
+      keep: false
+
+    source_sheet:
+      source_label: "Source worksheet name"
+      description: "Original VMI worksheet name used for traceability"
+      keep: false
+
+    source_updated_at:
+      source_label: "Atnaujinta"
+      description: "Update date shown in the VMI worksheet"
+      keep: false
+
+names:
+  columns:
+    name:
+      source_column: "pilnas_vardas"
+      description: "Full name"
+      keep: true
+
+    sex:
+      source_column: "lytis"
+      description: "Name sex classification"
+      keep: true
+
+    name_count:
+      source_column: "vardu_sk"
+      description: "Number of people with this name"
+      keep: false
+
+    normativity:
+      source_column: "normiskumas"
+      description: "Name normativity classification"
+      keep: false
+
+    origin_group_1:
+      source_column: "kilmes_grupe_1"
+      description: "First origin group"
+      keep: false
+
+rekvizitai:
+  columns:
+    input_name:
+      source_column: "ivestas_pavadinimas"
+      description: "Organization name used as scraper input"
+      keep: false
+
+    input_code:
+      source_column: "ivestas_kodas"
+      description: "Organization code used as scraper input"
+      keep: false
+
+    name:
+      source_column: "rastas_pavadinimas"
+      description: "Organization name found in Rekvizitai"
+      keep: false
+
+    code:
+      source_column: "kodas"
+      description: "Organization code found in Rekvizitai"
+      keep: true
+
+    code_match_status:
+      source_column: "kodo_atitikimas"
+      description: "Whether the input code matched the found code"
+      keep: false
+
+    recipient_age:
+      source_column: "amzius"
+      description: "Organization age shown by Rekvizitai"
+      keep: false
+
+    start_date:
+      source_column: "starto_data"
+      description: "Organization start date"
+      keep: true
+
+    director:
+      source_column: "vadovas"
+      description: "Organization manager"
+      keep: true
+
+    leader_gender:
+      source_column: "leaders_gender"
+      description: "Gender inferred or collected for the organization leader"
+      keep: true
+
+    address:
+      source_column: "adresas"
+      description: "Organization address"
+      keep: true
+
+    mobile_phone:
+      source_column: "mobilus_telefonas"
+      description: "Mobile phone listed by Rekvizitai"
+      keep: true
+
+    website:
+      source_column: "tinklalapis"
+      description: "Organization website"
+      keep: true
